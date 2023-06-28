@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css"/>
+        <title> Typing Test </title>
+    </head>
+
+    <body>
+        <div class="split-left" class="left">
+            <div class="quote"> 
+                <p></p>
+            </div>
+        </div>        
+        <div class="split-right">
+            <div class="header">
+                <p> Online Typing Test</p>
+            </div>
+            <ul class="result-details">
+                <li class="timer">
+                    <p class="curr_time">Time Limit</p>
+                    <span id="stats" class="timeLeft">60<span>
+                </li>
+                <li class="errors">
+                    <p class="curr_errors">Errors</p>
+                    <span id="stats" class="statsErrors">0<span>
+                </li>
+                <li class="accuracy">
+                    <p class="curr_accuracy">Acuraccy:</p>
+                    <span id="stats" class="statsAccuracy">0%<span>
+                </li>
+                <li class="cpm">
+                    <p class="curr_cpm">CPM</p>
+                    <span id="stats" class="statsCPM">0<span>
+                </li>
+                <li class="wpm">
+                    <p class="curr_wpm">Wdpm:</p>
+                    <span id="stats" class="statsWPM">0<span>
+                </li>
+            </ul>
+
+            <ul class="buttons"> 
+                <li>
+                    <button class="button-inside" onclick="reloadStats()">Try Again</button>
+                </li>
+                <li>   
+                    <select id="select-time" class="button-inside" value="time-selection" onchange="reloadStats()" onchange="selectTime()" >
+                        <option value="long-time">60s</option>
+                        <option value="short-time">15s</option>
+                        <option value="medium-time">30s</option>
+                        </select>
+                </li>
+                <li>
+                    <select id="select-language" class="button-inside" value="language-selection" onchange=selectLanguage() onchange="randomParagraph()" onchange="reloadStats()">
+                        <option value="english">English</option> 
+                        <option value="spanish">Español</option>
+                    </select>
+                </li>
+            </ul>
+
+
+
+            <textarea 
+                autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus=""
+                id="myTextarea"
+                class="input_area"
+                placeholder="Start typing here..."></textarea>"
+        </div>
+        
+        <script src="js/index.js"></script>
+        <script src="js/paragraphs.js"></script>
+    </body>
+</html>

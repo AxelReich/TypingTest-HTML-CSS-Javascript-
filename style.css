@@ -1,0 +1,186 @@
+/* Control the left side */
+.split-left {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  left: 0;
+  width: 35%;
+  background-color: grey;
+}
+
+/* Control the right side */
+.split-right {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  right: 0;
+  width: 65%;
+  background-color: rgb(77, 67, 67);
+}
+
+.header {
+  text-align: middle left;
+  margin-top: 20px;
+  margin-left: 50px;
+  font-weight: bold;
+  font-size: 30px;
+  color: aliceblue;
+}
+
+.result-details {
+  display: flex;
+  list-style-type: none;
+  margin-left: 100px;
+  text-align: center;
+}
+
+.split-left .quote {
+  background-color: #cbda4649;
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 25px;
+  box-shadow: black 5px 8px 5px;
+  overflow-y: auto;
+  max-height: 300px;
+  word-break: break-all; /* Use word-break instead of word-wrap */
+  text-align: left;
+  max-width: 100%; /* Adjust the max-width property */
+  white-space: normal;
+
+
+}
+
+.quote p {
+  word-break: normal;
+  white-space: pre-wrap;
+  margin: 0; /* Reset margin to remove extra space */
+}
+
+.quote p span {
+  display: inline-block;
+  word-break: normal;
+  position: relative;
+}
+
+.quote p span.correct {
+  color: rgb(16, 106, 16);
+}
+
+.quote p span.incorrect {
+  color: rgb(125, 41, 41);
+  background-color: rgb(247, 101, 101);
+  outline: 1px solid rgb(83, 11, 11);
+  border-radius: 3px;
+  border: none;
+}
+
+.quote p span.current {
+  color: black;
+}
+
+.quote p span.current:before {
+  content: "";
+  right: 100%;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  width: 2px;
+  position: absolute;
+  background-color: black;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+
+.timer, .errors, .accuracy,
+.cpm, .wpm {
+  background-color: #b3b59f;
+  height: 80px;
+  width: 105px;
+  margin: 8px;
+  padding: 12px;
+  border-radius: 20%;
+  box-shadow: black 5px 8px 5px;
+
+}
+
+.input_area {
+  background-color: #38382b;
+  height: 364px;
+  width: 734px;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-left: 100px;
+  margin-top: 50px;
+  padding: 20px;
+  border: 0px;
+  box-shadow: black 5px 8px 5px;
+}
+input.input_area {
+  padding: 0px 12px 60px 12px;
+}
+  
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header_text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.curr_time, .curr_errors,
+.curr_accuracy, .curr_cpm,
+.curr_wpm {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.buttons {
+  display:flex;
+  margin-left: 150px;
+  list-style-type: none;
+  text-align: center;
+  
+}
+
+.button-inside {
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 40px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+
+}
+
+#stats { 
+  font-size: 30px;
+  font-weight:lighter;
+}
+
+
+
+
+
+
