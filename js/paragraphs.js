@@ -57,4 +57,3 @@ textArea.addEventListener("input", initTyping);
 selectLanguage();
 
 
-//
